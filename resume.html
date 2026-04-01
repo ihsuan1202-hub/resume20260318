@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王逸璇的履歷</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- 基礎樣式重設 --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            background-color: #e9ecef;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- 履歷外容器 --- */
+        .resume-container {
+            background-color: #fff;
+            width: 100%;
+            max-width: 850px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* --- 頁首 (Header) --- */
+        .resume-header {
+            background-color: #f8f9fa;
+            padding: 35px 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* 照片圓框 */
+        .profile-photo-container {
+            width: 110px;
+            height: 110px;
+            flex-shrink: 0;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* 個人資訊 */
+        .profile-info {
+            flex-grow: 1;
+        }
+
+        .info-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .resume-header h1 {
+            font-size: 2rem;
+            color: #212529;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .current-status {
+            font-size: 0.95rem;
+            color: #495057;
+            background-color: #e9ecef;
+            padding: 8px 15px;
+            border-radius: 6px;
+            border-left: 4px solid #495057;
+        }
+
+        /* 技能標籤 */
+        .tags {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #495057;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* --- 主要內容區 (Main) --- */
+        .resume-main {
+            padding: 35px 40px;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 40px;
+        }
+
+        /* 自我介紹 */
+        .about-section {
+            flex: 2;
+        }
+
+        .resume-main h2 {
+            font-size: 1.4rem;
+            color: #212529;
+            margin-bottom: 15px;
+            font-weight: 600;
+            border-left: 4px solid #495057;
+            padding-left: 10px;
+        }
+
+        .about-section p {
+            font-size: 0.95rem;
+            color: #495057;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 聯絡方式與學經歷 (右側) */
+        .contact-aside {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .resume-main h3 {
+            font-size: 1.2rem;
+            color: #212529;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+
+        .contact-list li i {
+            color: #6c757d;
+            width: 15px;
+            text-align: center;
+        }
+
+        .info-block p {
+            font-size: 0.9rem;
+            color: #495057;
+        }
+
+        /* --- 響應式設計 (手機版) --- */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .info-top {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .tags {
+                justify-content: center;
+            }
+
+            .main-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <header class="resume-header">
+            <div class="header-content">
+                <div class="profile-photo-container">
+                    <img src="https://via.placeholder.com/150" alt="王逸璇的照片" class="profile-photo">
+                </div>
+                <div class="profile-info">
+                    <div class="info-top">
+                        <h1>王逸璇</h1>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <p class="subtitle">亞洲大學資訊傳播系 | 學號：114024065</p>
+                    <p class="current-status">我是一位正在學習前端的學生，目前正在學習網頁設計！</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="resume-main">
+            <div class="main-content">
+                
+                <section class="about-section">
+                    <h2>自我介紹</h2>
+                    <p>
+                        你好！我是王逸璇。目前就讀於亞洲大學資訊傳播系，對前端網頁開發充滿熱情。我喜歡將創意的想法透過程式碼轉化為實體網頁，並享受解決畫面上各種問題的成就感。
+                    </p>
+                    <p>
+                        目前除了學校的課程外，我也在積極自學 HTML、CSS 以及基礎的 JavaScript。希望能透過不斷實作專案累積經驗，朝著專業的前端工程師之路邁進。
+                    </p>
+                </section>
+
+                <aside class="contact-aside">
+                    <div>
+                        <h3>聯絡方式</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-envelope"></i> ihsuan1202@gmail.com</li>
+                            <li><i class="fas fa-phone"></i> 0912345678</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>最高學歷</h3>
+                        <p>亞洲大學 資訊傳播系</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>目前經歷</h3>
+                        <p>前端網頁設計 學習中</p>
+                    </div>
+                </aside>
+
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
