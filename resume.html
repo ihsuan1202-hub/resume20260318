@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>我的履歷</title>
+
+<style>
 body {
     margin: 0;
     font-family: "Noto Sans TC", sans-serif;
@@ -13,7 +20,6 @@ body {
 
 .header h1 {
     margin: 0;
-    font-size: 32px;
 }
 
 .tag {
@@ -37,19 +43,6 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.left h1 {
-    font-size: 22px;
-}
-
-.left h3 {
-    margin-top: 20px;
-    color: #6c8cff;
-}
-
-.left ul {
-    padding-left: 20px;
-}
-
 /* 右側 */
 .right {
     width: 70%;
@@ -63,11 +56,6 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-.right h2 {
-    margin-top: 0;
-    color: #333;
-}
-
 /* 按鈕 */
 button {
     margin-top: 10px;
@@ -77,9 +65,65 @@ button {
     background: #6c8cff;
     color: white;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 button:hover {
     background: #5a73d8;
 }
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>王逸璇</h1>
+    <p class="tag">前端學習者 / UI設計</p>
+</div>
+
+<div class="frame">
+
+    <!-- 左邊 -->
+    <div class="left">
+        <h2>聯絡方式</h2>
+        <p>Email：ihsuan1202@gmail.com</p>
+        <p>電話：0912345678</p>
+
+        <h2>技能</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+
+    <!-- 右邊 -->
+    <div class="right">
+        <section>
+            <h2>自我介紹</h2>
+            <p id="intro">我是一位正在學習前端的學生。</p>
+            <button onclick="changeText()">查看更多</button>
+        </section>
+
+        <section>
+            <h2>學歷</h2>
+            <p>亞洲大學 - 資訊傳播系</p>
+        </section>
+
+        <section>
+            <h2>經歷</h2>
+            <p>目前正在學習網頁設計</p>
+        </section>
+    </div>
+
+</div>
+
+<script>
+function changeText() {
+    document.getElementById("intro").innerHTML =
+    "我正在學習 HTML、CSS、JavaScript，目標成為前端工程師。";
+}
+</script>
+
+</body>
+</html>
